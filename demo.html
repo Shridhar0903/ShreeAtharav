@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+
+<!-- ================================================= -->
+<!-- ================== PRODUCT SECTION =============== -->
+<!-- ================================================= -->
+
+<section class="product-section">
+
+
+    <div class="section-head reveal">
+
+         <span>OUR PRODUCTS</span>
+
+        <h2>Dairy Equipment & Milking Machines</h2>
+
+    </div>
+
+     <div class="product-wrapper reveal">
+
+         <!-- LEFT CONTENT -->
+        <div class="product-left reveal">
+
+            <!-- PRODUCT CONTENT WRAPPER (For Animation) -->
+            <div id="productContent">
+                 <h2 id="title">Milk Analyzers</h2>
+                 <h4 id="subtitle">Automatic Pallet Wrapper</h4>
+
+                <p id="description">
+                   We specialize in manufacturing high-quality dairy
+                   machines designed to improve productivity
+                   and efficiency for modern dairy farms.
+                </p>
+
+                <button class="read-btn" onclick="goToProduct(0)">READ MORE →</button>
+
+            </div>
+
+
+            <!-- NAVIGATION LINES -->
+
+            <div class="nav-lines reveal">
+
+                 <span onclick="changeProduct(0)"
+                 class="line active"></span>
+
+                 <span onclick="changeProduct(1)"
+                 class="line"></span>
+
+                 <span onclick="changeProduct(2)"
+                 class="line"></span>
+
+                 <span onclick="changeProduct(3)"
+                 class="line"></span>
+            </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+
+        <div class="product-right reveal">
+
+            <div class="product-image-box">
+
+               <img id="productImage"
+                  src="Images/REIL-EMT.png">
+            </div>
+         </div>
+    </div>
+</section>
+
+<script src="js/demo.js"></script>
+</body>
+</html>

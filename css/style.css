@@ -138,7 +138,7 @@ h1, h2, h3, h4 {
 
 /* Primary */
 .btn.primary {
-    background: var(--red2);
+      background: linear-gradient(90deg, var(--red1), var(--red2));
     color: var(--white);
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -163,126 +163,174 @@ h1, h2, h3, h4 {
     font-family: 'Lato', sans-serif;
 }
 /* ===========================Services Section============================ */
-/* Section */
+/* ================= SECTION ================= */
 .services {
-    padding: 80px 6%; /* 🔥 equal left-right spacing */
-    background: var(--light-bg);
-    margin-top: 100px;
+  padding: 80px 8%;
+  background: var(--light-bg);
 }
 
-/* Title */
+/* ================= TITLE ================= */
 .section-title {
-    text-align: center;
-    margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .section-title h2 {
-    font-size: 40px;
-    color: var(--blue1);
-    font-family: 'Oswald', sans-serif;
+   font-size: 35px;
+   color: var(--blue1);
     margin-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .section-title p {
+ font-size: 20px;
+    line-height: 1.6;
+      font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
     color: #666;
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
 }
 
-/* Grid */
+/* ================= GRID ================= */
 .services-container {
-    width: 100%;       /* 🔥 full width inside section */
-    margin: 0;         /* 🔥 remove auto margin */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
 
-/* Card */
+/* ================= CARD ================= */
 .service-card {
-    background: var(--white);
-    padding: 30px 25px;
-    border-radius: 12px;
-    position: relative;
-    overflow: hidden;
-    transition: 0.4s;
-
-    border-left: 4px solid var(--blue1);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  position: relative;
+  height: 320px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.4s;
 }
 
-/* Hover Background Effect */
-.service-card::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0%;
-    bottom: 0;
-    left: 0;
-    background: var(--blue1);
-    z-index: 0;
-    transition: 0.4s;
+/* IMAGE */
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
 }
 
-/* Content above overlay */
-.service-card h3,
-.service-card p {
-    position: relative;
-    z-index: 1;
+/* ================= DEFAULT TITLE ================= */
+.service-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
 }
 
-/* Title */
-.service-card h3 {
-    color: var(--blue1);
-    margin-bottom: 10px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
+.service-title h3 {
+  font-size: 20px;
+    line-height: 1.6;
+      font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
+    color: white;
 }
 
-/* Text */
-.service-card p {
-    color: #555;
-    font-size: 15px;
-    font-family: 'Lato', sans-serif;
+/* ================= OVERLAY ================= */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(10, 61, 98, 0.85),
+    rgba(229, 80, 57, 0.85)
+  );
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 1;
 }
 
-/* Hover Effects */
-.service-card:hover::before {
-    height: 100%;
+/* ================= HOVER CONTENT ================= */
+.hover-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.4s;
 }
 
-.service-card:hover h3,
-.service-card:hover p {
-    color: var(--white);
+/* ICON */
+.hover-content i {
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    border-left: 4px solid var(--red2);
+/* TITLE */
+.hover-content h3 {
+  font-size: 20px;
+    line-height: 1.6;
+      font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
+    color: white;
+
 }
 
-/* View More Button */
-.view-more {
-    text-align: center;
-    margin-top: 80px;
-    font-family: 'Lato', sans-serif;
+/* TEXT */
+.hover-content p {
     font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
+    color: white;
 }
 
-.btn-view {
-    padding: 12px 30px;
-    background: var(--red2);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+/* BUTTON */
+.view-btn {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background: #fff;
+  color: var(--red1);
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+   font-family: 'Lato', sans-serif;
 }
 
-.btn-view:hover {
-    background: var(--red1);
+.view-btn:hover {
+  background: var(--dark1);
+  color: #fff;
 }
 
-/* Section */
+/* ================= HOVER EFFECT ================= */
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+.service-card:hover .overlay {
+  opacity: 1;
+}
+
+.service-card:hover .hover-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card:hover .service-title {
+  opacity: 0;
+}
+
+/* EXTRA PREMIUM TOUCH */
+.service-card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* =====================================Section ================================================= */
+
 .about-section {
     position: relative;
     padding: 120px 0;
@@ -331,7 +379,7 @@ h1, h2, h3, h4 {
 .about-box h2 {
     font-size: 35px;
     margin-bottom: 15px;
-      font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 /* Text */
@@ -339,7 +387,6 @@ h1, h2, h3, h4 {
     font-size: 20px;
     line-height: 1.6;
       font-family: 'Lato', sans-serif;
-   
     margin-bottom: 20px;
 }
 
@@ -347,7 +394,7 @@ h1, h2, h3, h4 {
 .about-btn {
     display: inline-block;
     padding: 10px 20px;
-    background: var(--red2);
+      background: linear-gradient(90deg, var(--red1), var(--red2));
     color: var(--white);
     text-decoration: none;
     border-radius: 4px;
@@ -360,141 +407,35 @@ h1, h2, h3, h4 {
     background: var(--red1);
 }
 
-
-
-/* ===================================================================== */
-/* SECTION */
-/* SECTION */
-.customers {
-    padding: 100px 0;
-    background: var(--white);
-    margin-top: -80px;
-}
-
-/* CONTAINER */
-.customers-container {
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    align-items: center;
-}
-
-/* LEFT HIGHLIGHT BOX */
-.customer-highlight {
-    background: linear-gradient(135deg, var(--blue1), var(--blue2));
-    color: var(--white);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-}
-
-.customer-highlight h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    font-family: 'Oswald', sans-serif;
-}
-
-.customer-highlight p {
-    font-size: 18px;
-    line-height: 1.6;
-    font-family: 'Lato', sans-serif;
-}
-
-/* GRID */
-.customer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-/* CARD */
-.customer-card {
-    background: var(--light-bg);
-    padding: 30px 20px;
-    text-align: center;
-    border-radius: 12px;
-    transition: 0.4s;
-    position: relative;
-    overflow: hidden;
-}
-
-/* ICON */
-.customer-card i {
-    font-size: 30px;
-    color: var(--red2);
-    margin-bottom: 10px;
-}
-
-/* TITLE */
-.customer-card h4 {
-    font-size: 18px;
-    color: var(--blue1);
-    font-family: 'Oswald', sans-serif;
-}
-
-/* HOVER EFFECT */
-.customer-card::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 0%;
-    bottom: 0;
-    left: 0;
-    background: var(--blue1);
-    transition: 0.4s;
-    z-index: 0;
-}
-
-.customer-card:hover::before {
-    height: 100%;
-}
-
-.customer-card:hover i,
-.customer-card:hover h4 {
-    color: var(--white);
-    position: relative;
-    z-index: 1;
-}
-
-.customer-card:hover {
-    transform: translateY(-10px);
-}
-
-
-
 /* ========================================================= */
 /* ===================productsection================== */
 
 .product-section{
     padding: 20px 0;
-    background: #ffffff;
-     margin-top: 80px;
+    background:var(--light-bg);
+     margin-top: -30px;
     margin-bottom: 3px;
      overflow: hidden;
 }
 
 .section-head{
 text-align:center;
+margin-top: 30px;
 
-}
-
-.section-head span{
-   font-size: 40px;
-   color: #041f71;
-   font-weight: 700;
-    margin-bottom: 15px;
-    font-family: 'Oswald', sans-serif;
-    
 }
 
 .section-head h2{
-  font-size: 30px;
-  font-weight: 600;
-    margin: 15px 0 25px;
-    color:#7f7d7d;
-      font-family: 'Lato', sans-serif;
+   font-size: 40px;
+    color: var(--blue1);
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 15px;
+    
+}
+
+.section-head p{
+ color: #666;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
 }
 
 .product-wrapper{
@@ -516,7 +457,7 @@ text-align:center;
 background: rgba(255,255,255,0.08);
 backdrop-filter: blur(12px);
 -webkit-backdrop-filter: blur(12px);
-transform: translateY(-8px);
+transform: translateX(-8px);
 } 
 
 .product-left{
@@ -549,8 +490,8 @@ font-size:20px ;
 }
 
 .read-btn{
-margin-top:25px;
-background:var(--red2);
+margin-top:25px;  
+background: linear-gradient(90deg, var(--red1), var(--red2));
 color:white;
 padding:12px 28px;
 border-radius:6px;
@@ -697,8 +638,219 @@ animation:slideInRight 0.5s forwards;
 }
 
 
+/* ===================================================================== */
+/* SECTION */
+/* ===================== SERVICES SECTION ===================== */
+.Projects {
+  padding: 1px 8% 50px;
+  background: var(--light-bg);
+  position: relative;
+  overflow: hidden;
+  
 
-/* ===== CTA SECTION ===== */
+}
+
+/* ================= HEADER ================= */
+.projects-header {
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+
+.projects-header .tag {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--blue2);
+  margin-bottom: 12px;
+}
+
+.projects-header h2 {
+  font-size: 40px;
+    color: var(--blue1);
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 15px;
+}
+
+
+.projects-header p {
+  color: #666;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+/* ================= WRAPPER ================= */
+.projects-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 50px;
+}
+
+/* ================= PANEL WRAPPER ================= */
+.projects-panel {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ================= PANEL ================= */
+.panel {
+  flex: 0 0 300px;
+  height: 450px;
+
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  border-radius: 12px;
+  transition: flex 0.5s ease;
+}
+
+/* EXPAND ON HOVER */
+.panel:hover {
+  flex: 0 0 400px;
+}
+
+/* ================= IMAGE ================= */
+.panel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+/* ================= OVERLAY ================= */
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 61, 98, 0.75); /* blue overlay */
+  z-index: 1;
+  transition: 0.4s;
+}
+
+/* ================= CONTENT ================= */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  text-align: center;
+}
+
+/* ICON */
+.content i {
+  font-size: 40px;
+  margin-bottom: 12px;
+  color: var(--white);
+  transition: 0.4s;
+}
+
+/* TITLE */
+.content h2 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: var(--white);
+  font-family: 'Lato', sans-serif;
+}
+
+/* TEXT */
+.content p {
+  color: #e0e0e0;
+  margin-top: 12px;
+  font-size: 14px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s ease;
+  font-family: 'Lato', sans-serif;
+}
+
+/* ================= NAV CONTROLS ================= */
+.nav-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+/* BUTTON */
+.nav-btn {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background: var(--blue1);
+  color: var(--white);
+  font-size: 20px;
+
+  transition: 0.3s;
+}
+
+/* HOVER */
+.nav-btn:hover {
+  background: linear-gradient(45deg, var(--red1), var(--red2));
+  transform: scale(1.1);
+}
+
+/* ================= HOVER EFFECT ================= */
+
+/* IMAGE ZOOM */
+.panel:hover img {
+  transform: scale(1.1);
+}
+
+/* OVERLAY LIGHTER */
+.panel:hover::after {
+  background: rgba(10, 61, 98, 0.45);
+}
+
+/* TEXT SHOW */
+.panel:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ICON EFFECT */
+.panel:hover i {
+  transform: scale(1.2);
+  text-shadow: 0 0 12px rgba(229, 80, 57, 0.8);
+}
+
+/* TITLE COLOR */
+.panel:hover h2 {
+  color: var(--light-bg);
+}
+
+/* ================= BUTTON ================= */
+.projects-btn {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.projects-btn .btn.primary {
+  background: linear-gradient(90deg, var(--red1), var(--red2));
+  color: var(--white);
+  box-shadow: 0 8px 25px rgba(229, 80, 57, 0.3);
+}
+
+.projects-btn .btn.primary:hover {
+  box-shadow: 0 12px 30px rgba(229, 80, 57, 0.5);
+}
+
+
+
+/* ================================== CTA SECTION============================ ===== */
 .cta-section {
     position: relative;
     padding: 120px 6%;
@@ -767,4 +919,67 @@ animation:slideInRight 0.5s forwards;
     background: var(--red2);
     color: white;
     transform: translateY(-3px);
+}
+
+
+/* ================================================================================ */
+/* ================= SECTION ================= */
+.logo-marquee {
+  padding: 60px 8%;
+  background: var(--light-bg);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* TITLE */
+.marquee-title {
+     font-size: 35px;
+   color: var(--blue1);
+    margin-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 50px;
+
+}
+
+/* ================= MARQUEE ================= */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* TRACK */
+.marquee-track {
+  display: flex;
+  gap: 60px;
+  width: max-content;
+
+  animation: scroll 20s linear infinite;
+}
+
+/* LOGOS */
+.marquee-track img {
+  height: 60px;
+  object-fit: contain;
+
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.marquee-track img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ================= ANIMATION ================= */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

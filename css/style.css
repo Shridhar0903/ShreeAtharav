@@ -16,7 +16,7 @@ html,body{
 
     --red1:#E55039;
     --red2:#B71540;
-    --red3:#FF6B6B;
+    --red3:#f8f139;
 
     --dark1:#1B1B1B;
     --dark2:#2C2C2C;
@@ -102,7 +102,7 @@ h1, h2, h3, h4 {
     max-height: 700px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px  rgba(193, 127, 3, 0.49);
      margin-top: -130px; /* 🔥 THIS creates overlap */
     z-index: 5;
 }
@@ -363,7 +363,8 @@ h1, h2, h3, h4 {
     height: 300px;
 
     /* 🔥 Glass Effect */
-    background: rgba(10, 45, 98, 0.707); /* semi-transparent blue */
+    /* background: rgba(10, 45, 98, 0.707); semi-transparent blue */
+    background: linear-gradient(90deg, rgba(10, 45, 98, 0.707), rgba(179, 10, 10, 0.852));
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -683,14 +684,14 @@ animation:slideInRight 0.5s forwards;
 .projects-wrapper {
   position: relative;
   overflow: hidden;
-  margin: 50px;
+  margin: 60px;
 }
 
 /* ================= PANEL WRAPPER ================= */
 .projects-panel {
   display: flex;
   gap: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 
   overflow: hidden;
   scroll-behavior: smooth;
@@ -728,7 +729,7 @@ animation:slideInRight 0.5s forwards;
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(10, 61, 98, 0.75); /* blue overlay */
+  background: linear-gradient(180deg, rgba(10, 45, 98, 0.495), rgba(179, 10, 10, 0.516));
   z-index: 1;
   transition: 0.4s;
 }
@@ -834,7 +835,7 @@ animation:slideInRight 0.5s forwards;
 /* ================= BUTTON ================= */
 .projects-btn {
   text-align: center;
-  margin-top: 60px;
+  margin-top: -15px;
   margin-bottom: 50px;
 }
 
@@ -874,7 +875,7 @@ animation:slideInRight 0.5s forwards;
 .cta-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 2, 3, 0.75); /* your blue theme overlay */
+  background: linear-gradient(90deg, rgba(10, 45, 98, 0.895), rgba(192, 7, 7, 0.9));
     z-index: 1;
 }
 

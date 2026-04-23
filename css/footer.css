@@ -28,7 +28,7 @@ html,body{
 
 /* ===== FOOTER ===== */
 .footer {
-    background: var(--red4);
+    background: linear-gradient(20deg, rgba(164, 7, 7, 0.895), rgb(182, 9, 9));
     color: var(--white);
     padding-top: 70px;
 }

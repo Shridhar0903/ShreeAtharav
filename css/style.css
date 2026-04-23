@@ -729,7 +729,7 @@ animation:slideInRight 0.5s forwards;
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 45, 98, 0.495), rgba(179, 10, 10, 0.516));
+  background: linear-gradient(180deg, rgba(10, 45, 98, 0.495));
   z-index: 1;
   transition: 0.4s;
 }
@@ -810,10 +810,7 @@ animation:slideInRight 0.5s forwards;
   transform: scale(1.1);
 }
 
-/* OVERLAY LIGHTER */
-.panel:hover::after {
-  background: rgba(10, 61, 98, 0.45);
-}
+
 
 /* TEXT SHOW */
 .panel:hover p {
@@ -824,7 +821,7 @@ animation:slideInRight 0.5s forwards;
 /* ICON EFFECT */
 .panel:hover i {
   transform: scale(1.2);
-  text-shadow: 0 0 12px rgba(229, 80, 57, 0.8);
+  /* text-shadow: 0 0 12px rgba(229, 80, 57, 0.8); */
 }
 
 /* TITLE COLOR */

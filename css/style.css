@@ -962,15 +962,13 @@ animation:slideInRight 0.5s forwards;
 .marquee-track img {
   height: 60px;
   object-fit: contain;
-
-  filter: grayscale(100%);
-  opacity: 0.7;
+  opacity: 1;
   transition: 0.3s;
 }
 
 /* HOVER EFFECT */
 .marquee-track img:hover {
-  filter: grayscale(0%);
+  
   opacity: 1;
   transform: scale(1.1);
 }
